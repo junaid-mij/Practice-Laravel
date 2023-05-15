@@ -27,6 +27,8 @@ Laravel utilizes Composer to manage its dependencies. First, download Composer:
 
 You should see the Composer's version and a list of commands.
 
+![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-13%20Laravel%20Foundation%20Step-12/Assignment-13/image/1.png)
+
 ### Step 2: Install Laravel
 
 1. Install Laravel by running:
@@ -36,6 +38,8 @@ You should see the Composer's version and a list of commands.
     ```
 
 2. Make sure that the `~/.composer/vendor/bin` directory is in your system's PATH.
+
+![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-13%20Laravel%20Foundation%20Step-12/Assignment-13/image/2.png)
 
 ### Step 3: Create a New Laravel Project
 
@@ -48,6 +52,25 @@ You should see the Composer's version and a list of commands.
 2. Replace `project-name` with your desired project name.
 
 You now have a new Laravel project in a directory with your specified name.
+
+![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-13%20Laravel%20Foundation%20Step-12/Assignment-13/image/3.png)
+
+### Step 4: Run the New Laravel Project
+
+1. To Run a new Laravel project, use the new command:
+    
+    ```shell
+    php artisan serve
+    ```
+![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-13%20Laravel%20Foundation%20Step-12/Assignment-13/image/4.png)
+
+### Step 4: Show the New Laravel Project in Browser
+
+![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-13%20Laravel%20Foundation%20Step-12/Assignment-13/image/5.png)
+
+### Step 4: Create a new route in the Laravel project that displays a simple "Hello, World!" message
+
+![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-13%20Laravel%20Foundation%20Step-12/Assignment-13/image/6.png)
 
 ## Part 2: Laravel Folder Structure
 
