@@ -201,6 +201,6 @@
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-7/4.png)
 
 ### Another way:
-![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-7/4.png)
+![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-7/5.png)
 
 # Author: Marajul Islam
