@@ -1,10 +1,8 @@
-# Laravel Installation and Folder Structure Assignment
+# Module-14 Laravel Foundation Assignment:
 
-## Part 1: Laravel Installation
+## Question 1: You have a Laravel application with a form that submits user information using a POST request. Write the code to retrieve the 'name' input field value from the request and store it in a variable called $name.
 
-### Step 1: Install Composer
-
-Laravel utilizes Composer to manage its dependencies. First, download Composer:
+### Step 1: Make a Controller
 
 1. Open Terminal.
 2. Run the following command:
@@ -13,21 +11,7 @@ Laravel utilizes Composer to manage its dependencies. First, download Composer:
     curl -sS https://getcomposer.org/installer | php
     ```
 
-3. Move the composer.phar file to make it globally accessible:
-
-    ```shell
-    mv composer.phar /usr/local/bin/composer
-    ```
-
-4. Verify the installation by running:
-
-    ```shell
-    composer
-    ```
-
-You should see the Composer's version and a list of commands.
-
-![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-13%20Laravel%20Foundation%20Step-12/Assignment-13/image/1.png)
+![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-1/1.png)
 
 ### Step 2: Install Laravel
 
