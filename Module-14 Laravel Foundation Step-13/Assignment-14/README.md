@@ -10,17 +10,11 @@
     ```shell
     php artisan make:controller FormController
     ```
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-1/1.png)
-
 ### Step 2: Implement the controller method
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-1/2.png)
-
 ### Step 3: Define the route 
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-1/3.png)
-
 ### Step 4: Start the Laravel development server
 
 1. To start a development server, use the new command:
@@ -29,7 +23,6 @@
     php artisan serve
     ```
 ### Step 5: Test the route using Postman
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-1/4.png)
 
 
@@ -44,17 +37,11 @@
     ```shell
     php artisan make:controller UserController
     ```
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-2/1.png)
-
 ### Step 2: Implement the controller method
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-2/2.png)
-
 ### Step 3: Define the route 
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-2/3.png)
-
 ### Step 4: Start the Laravel development server
 
 1. To start a development server, use the new command:
@@ -63,9 +50,7 @@
     php artisan serve
     ```
 ### Step 5: Test the route using Postman
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-2/4.png)
-
 
 
 
@@ -79,17 +64,11 @@
     ```shell
     php artisan make:controller ApiController
     ```
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-3/1.png)
-
 ### Step 2: Implement the controller method
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-3/2.png)
-
 ### Step 3: Define the route 
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-3/3.png)
-
 ### Step 4: Start the Laravel development server
 
 1. To start a development server, use the new command:
@@ -98,13 +77,9 @@
     php artisan serve
     ```
 ### Step 5: Test the route using Postman
-
 1. Without Parameter:
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-3/4.png)
-
 1. With Parameter:
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-3/5.png)
 
 
@@ -112,15 +87,10 @@
 ## Question 4: Create a JSON response in Laravel with the following data:
 ## {
 ##     "message": "Success",
-
 ##     "data": {
-
 ##         "name": "John Doe",
-
 ##         "age": 25
-
 ##     }
-
 ## }
 
 ### Step 1: Create a new controller
@@ -131,26 +101,18 @@
     ```shell
     php artisan make:controller JsonController
     ```
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-4/1.png)
-
 ### Step 2: Implement the controller method
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-4/2.png)
-
 ### Step 3: Define the route 
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-4/3.png)
-
 ### Step 4: Start the Laravel development server
-
 1. To start a development server, use the new command:
     
     ```shell
     php artisan serve
     ```
 ### Step 5: Test the route using Postman
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-4/4.png)
 
 
@@ -165,17 +127,11 @@
     ```shell
     php artisan make:controller UploadController
     ```
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-5/1.png)
-
 ### Step 2: Implement the controller method
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-5/2.png)
-
 ### Step 3: Define the route 
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-5/3.png)
-
 ### Step 4: Start the Laravel development server
 
 1. To start a development server, use the new command:
@@ -184,14 +140,7 @@
     php artisan serve
     ```
 ### Step 5: Test the route using Postman
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-5/4.png)
-
-
-
-### Step 5: Test the route using Postman
-
-![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-4/4.png)
 
 
 
@@ -205,17 +154,11 @@
     ```shell
     php artisan make:controller ManageController
     ```
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-6/1.png)
-
 ### Step 2: Implement the controller method
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-6/2.png)
-
 ### Step 3: Define the route 
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-6/3.png)
-
 ### Step 4: Start the Laravel development server
 
 1. To start a development server, use the new command:
@@ -224,7 +167,6 @@
     php artisan serve
     ```
 ### Step 5: Test the route using Postman
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-6/4.png)
 
 
@@ -243,17 +185,13 @@
     ```shell
     php artisan make:controller SubmitController
     ```
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-7/1.png)
-
 ### Step 2: Implement the controller method
 
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-7/2.png)
-
 ### Step 3: Define the route 
 
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-7/3.png)
-
 ### Step 4: Start the Laravel development server
 
 1. To start a development server, use the new command:
