@@ -22,3 +22,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 //Api Endpoint:
 Route::get('/my-api', [ApiController::class, 'myEndpoint']);
+
+Route::post('/submit', function(Request $request){
+    $email = $request->input('email');
+    if($email){
+        return array(
+            "success"=> true,
+            "message"=> "Form submitted successfully."
+        );
+    }else{
+        return "Email must not be empty!";
+    }
+});

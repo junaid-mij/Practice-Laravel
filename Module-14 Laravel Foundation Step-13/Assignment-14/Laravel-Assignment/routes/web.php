@@ -40,3 +40,4 @@ Route::get('/retrieve-cookie', [ManageController::class, 'retrieveRememberToken'
 
 //Submit:
 Route::post('/submit', [SubmitController::class, 'submit']);
+

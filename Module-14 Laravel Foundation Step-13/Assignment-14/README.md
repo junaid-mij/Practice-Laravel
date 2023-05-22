@@ -187,10 +187,8 @@
     ```
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-7/1.png)
 ### Step 2: Implement the controller method
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-7/2.png)
 ### Step 3: Define the route 
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-7/3.png)
 ### Step 4: Start the Laravel development server
 
@@ -200,8 +198,9 @@
     php artisan serve
     ```
 ### Step 5: Test the route using Postman
-
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-7/4.png)
 
+### Another way:
+![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-7/4.png)
 
 # Author: Marajul Islam
