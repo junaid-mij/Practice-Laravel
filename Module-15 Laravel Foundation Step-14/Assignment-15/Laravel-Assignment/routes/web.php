@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Task 2: Request Redirect
+Route::get('/home', function () {
+    return redirect('/dashboard');
+});
+
+//Task 4: Route Middleware
+Route::group(['middleware' => 'auth'], function () {
+    // Routes for authenticated users
+    Route::get('/profile', ProfileController::class,'index');
+    Route::get('/settings', SettingsController::class,'index');
+});
+
