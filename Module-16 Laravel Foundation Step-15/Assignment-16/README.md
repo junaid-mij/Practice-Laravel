@@ -11,21 +11,6 @@
     composer create-project laravel/laravel MigrationAssignment
     ```
 ![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-16%20Laravel%20Foundation%20Step-15/Assignment-16/Document/Tasl-1/1.png)
-### Step 2: Implement the controller method
-![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-1/2.png)
-### Step 3: Define the route 
-![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-1/3.png)
-### Step 4: Start the Laravel development server
-
-1. To start a development server, use the new command:
-    
-    ```shell
-    php artisan serve
-    ```
-### Step 5: Test the route using Postman
-![App Screenshot](https://github.com/junaid-mij/Practice-Laravel/blob/Practice-Laravel/Module-14%20Laravel%20Foundation%20Step-13/Assignment-14/document/Question-1/4.png)
-
-
 
 ## Question 2: In your Laravel application, you want to retrieve the value of the 'User-Agent' header from the current request. Write the code to accomplish this and store the value in a variable called $userAgent.
 
