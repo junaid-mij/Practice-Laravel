@@ -1,4 +1,4 @@
-# Module-16 Laravel Migration Concepts Assignment-16:
+# Module-17 Query Builder in Laravel Assignment-17:
 
 ## Task 1: Explain what Laravel's query builder is and how it provides a simple and elegant way to interact with databases.
 
