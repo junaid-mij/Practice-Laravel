@@ -8,6 +8,7 @@ Laravel's query builder is a fluent interface for building and executing databas
 
 ### Code to retrieve the "excerpt" and "description" columns from the "posts" table using Laravel's query builder:
 
+1. 
     ```shell
     $posts = DB::table('posts')->select('excerpt', 'description')->get();
     print_r($posts);
