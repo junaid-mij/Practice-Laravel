@@ -1,4 +1,4 @@
-# Module-18 Laravel Migration Concepts Assignment-18:
+# Module-18 Laravel Beginner Project Assignment-18:
 
 ## Task 1: Create a new migration file to add a new table named "categories" to the database. The table should have the following columns:
 ### Step 1: Create a new migration file
