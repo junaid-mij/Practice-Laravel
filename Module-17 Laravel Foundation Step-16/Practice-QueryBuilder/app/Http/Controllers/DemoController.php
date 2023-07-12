@@ -10,8 +10,9 @@ class DemoController extends Controller
 {
     function DemoFunction()
     {
-        $query = DB::table('products')->where('price','>',1000);
-        $query1 = DB::table('products')->where('category_id','=',3)->union($query)->get();
+        $query1 = DB::table('products')->where('products.price','>',2000);
+        $query2 = DB::table('products')->where('products.discount','=',1);
+
         return $query1;
     }
 }
