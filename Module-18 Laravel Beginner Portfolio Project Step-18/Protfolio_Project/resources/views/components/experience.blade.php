@@ -9,47 +9,75 @@
             <section>
                 <div class="d-flex align-items-center justify-content-between mb-4">
                     <h2 class="text-primary fw-bolder mb-0">Experience</h2>
-                    <a class="btn btn-primary px-4 py-3" href="#!">
+                    <a target="_blank" class="btn btn-primary px-4 py-3" id="resumeDownloadLink" href="">
                         <div class="d-inline-block bi bi-download me-2"></div>
                         Download Resume
                     </a>
                 </div>
-
                 <!-- Experience Card 1-->
-                <div class="card shadow border-0 rounded-4 mb-5">
-                    <div class="card-body p-5">
-                        <div class="row align-items-center gx-5">
-                            <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                <div class="bg-light p-4 rounded-4">
-                                    <div class="text-primary fw-bolder mb-2">2019 - Present</div>
-                                    <div class="small fw-bolder">Web Developer</div>
-                                    <div class="small text-muted">Stark Industries</div>
-                                    <div class="small text-muted">Los Angeles, CA</div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8"><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</div></div>
-                        </div>
-                    </div>
+                <div id="experience-list">
+                    <!-- Dynamic data-->
                 </div>
-
-                <!-- Experience Card 2-->
-                <div class="card shadow border-0 rounded-4 mb-5">
-                    <div class="card-body p-5">
-                        <div class="row align-items-center gx-5">
-                            <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                <div class="bg-light p-4 rounded-4">
-                                    <div class="text-primary fw-bolder mb-2">2017 - 2019</div>
-                                    <div class="small fw-bolder">SEM Specialist</div>
-                                    <div class="small text-muted">Wayne Enterprises</div>
-                                    <div class="small text-muted">Gotham City, NY</div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8"><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</div></div>
-                        </div>
-                    </div>
-                </div>
-
             </section>
         </div>
     </div>
 </div>
+
+<script>
+    //Resume Download section:
+    GetResumeLink();
+    async function GetResumeLink() {
+
+        try {
+            let URL = '/resumeLink';
+
+            // Loader showing content hidding:
+            document.getElementById('loading-div').classList.remove('d-none');
+            document.getElementById('content-div').classList.add('d-none');
+
+            // Ajax request starts here:
+            const response = await axios.get(URL);
+
+            let link= response.data['downloadLink'];
+            document.getElementById("resumeDownloadLink").setAttribute('href', link);
+
+        } catch (error) {
+            alert(error);
+        }
+
+    }
+
+    //Experience Section:
+    GetExperienceList();
+    async function GetExperienceList() {
+
+        try {
+            let URL = '/experiencesData';
+            // Ajax request starts here:
+            const response = await axios.get(URL);
+
+            response.data.forEach((item) => {
+                document.getElementById('experience-list').innerHTML += (`
+                <div class="card shadow border-0 rounded-4 mb-5">
+                        <div class="card-body p-5">
+                            <div class="row align-items-center gx-5">
+                                <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                    <div class="bg-light p-4 rounded-4">
+                                        <div class="text-primary fw-bolder mb-2">${item['duration']}</div>
+                                        <div class="small fw-bolder">${item['title']}</div>
+                                        <div class="small text-muted">${item['designation']}</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8"><div>${item['details']}</div></div>
+                            </div>
+                        </div>
+                    </div>
+                `);
+            })
+
+        } catch (error) {
+            alert(error);
+        }
+
+    }
+</script>
