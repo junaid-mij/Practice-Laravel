@@ -6,11 +6,13 @@ use App\Helper\JWTToken;
 use App\Mail\OTPMail;
 use App\Models\User;
 use Exception;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class UserController extends Controller
 {
+    // API Functions:
     function UserRegistration(Request $request){
         try{
             User::create([
@@ -28,7 +30,7 @@ class UserController extends Controller
         }catch(Exception $e){
             return response()->json([
                 "status" => "error",
-                "message" => $e->getMessage()
+                "message" => "Something went wrong! Please try again"
             ]);
         };
     }
@@ -44,13 +46,12 @@ class UserController extends Controller
             return response()->json([
                 "status" => "success",
                 "message" => "User Login Successfully",
-                "token" => $token
-            ]);
+            ])->cookie('token', $token, 60*24*30);
         }else{
             return response()->json([
                 "status" => "error",
                 "message" => "Invalid Credentials"
-            ],401);
+            ]);
         }
     }
     function SendOTPCode(Request $request){
@@ -79,7 +80,7 @@ class UserController extends Controller
             return response()->json([
                 "status" => "error",
                 "message" => "Invalid Credentials"
-            ],401);
+            ]);
         }
 
     }
@@ -109,7 +110,7 @@ class UserController extends Controller
             return response()->json([
                 "status" => "error",
                 "message" => "Invalid Credentials"
-            ],401);
+            ]);
         }
     }
     function ResetPassword(Request $request){
@@ -127,7 +128,24 @@ class UserController extends Controller
             return response()->json([
                 "status" => "error",
                 "message" => $e->getMessage()
-            ],401);
+            ]);
         }
+    }
+
+    // Page Functions:
+    function LoginPage():View{
+        return view('pages.auth.login-page');
+    }
+    function RegistrationPage():View{
+        return view('pages.auth.registration-page');
+    }
+    function SendOTPPage():View{
+        return view('pages.auth.send-otp-page');
+    }
+    function VerifyOTPPage():View{
+        return view('pages.auth.verify-otp-page');
+    }
+    function ResetPasswordPage():View{
+        return view('pages.auth.reset-pass-page');
     }
 }

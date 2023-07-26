@@ -17,22 +17,21 @@
 
 <body>
 
+    <div id="loader" class="LoadingOverlay d-none">
+    <div class="Line-Progress">
+        <div class="indeterminate"></div>
+    </div>
+    </div>
 
+    <div>
+        @yield('content')
+    </div>
 
-<div id="loader" class="LoadingOverlay d-none">
-<div class="Line-Progress">
-    <div class="indeterminate"></div>
-</div>
-</div>
+    <script>
 
-<div>
-    @yield('content')
-</div>
-<script>
+    </script>
 
-</script>
-
-<script src="{{asset('js/bootstrap.bundle.js')}}"></script>
+    <script src="{{asset('js/bootstrap.bundle.js')}}"></script>
 
 </body>
 </html>
