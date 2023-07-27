@@ -37,11 +37,11 @@ class UserController extends Controller
     function UserLogin(Request $request){
         $count = User::where('email', $request->input('email'))
             ->where('password', $request->input('password'))
-            ->count();
+            ->select('id')->first();
 
-        if($count==1){
+        if($count!==null){
             // User login-> JWT token Issue
-            $token = JWTToken::CreateToken($request->input('email'));
+            $token = JWTToken::CreateToken($request->input('email'),$count->id);
 
             return response()->json([
                 "status" => "success",
@@ -104,8 +104,7 @@ class UserController extends Controller
             return response()->json([
                 "status" => "success",
                 "message" => "OTP Verified Successfully",
-                "token" => $token
-            ]);
+            ])->cookie('token', $token, 60*24*30);
         }else{
             return response()->json([
                 "status" => "error",
@@ -131,6 +130,45 @@ class UserController extends Controller
             ]);
         }
     }
+    function UserLogout(Request $request){
+        return redirect('/userLogin')->cookie('token','',-1);
+    }
+    function UserProfile(Request $request){
+        $email = $request->header('email');
+        $user= User::where('email','=', $email)->first();
+        return response()->json([
+            "status" => "success",
+            "message" => "Request Successful",
+            "data" => $user
+        ]);
+    }
+    function UpdateProfile(Request $request){
+        try{
+            // Input:
+            $email= $request->header('email');
+            $firstName = $request->input('firstName');
+            $lastName = $request->input('lastName');
+            $mobile = $request->input('mobile');
+            $password = $request->input('password');
+            // Update in Database:
+            User::where('email','=', $email)->update([
+                'firstName' => $firstName,
+                'lastName' => $lastName,
+                'mobile' => $mobile,
+                'password' => $password
+            ]);
+            return response()->json([
+                "status" => "success",
+                "message" => "Profile Updated Successfully"
+            ]);
+        }
+        catch(Exception $e){
+            return response()->json([
+                "status" => "error",
+                "message" => "Something Went Wrong!"
+            ]);
+        }
+    }
 
     // Page Functions:
     function LoginPage():View{
@@ -147,5 +185,8 @@ class UserController extends Controller
     }
     function ResetPasswordPage():View{
         return view('pages.auth.reset-pass-page');
+    }
+    function ProfilePage():View{
+        return view('pages.dashboard.profile-page');
     }
 }

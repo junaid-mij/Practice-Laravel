@@ -57,12 +57,9 @@
         else{
             errorToast(res.data['message'])
         }
-
     }
 
     async function onUpdate() {
-
-
         let firstName = document.getElementById('firstName').value;
         let lastName = document.getElementById('lastName').value;
         let mobile = document.getElementById('mobile').value;
