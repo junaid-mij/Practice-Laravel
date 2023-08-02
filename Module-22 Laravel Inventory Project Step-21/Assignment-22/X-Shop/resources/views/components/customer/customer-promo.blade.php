@@ -4,7 +4,7 @@
             <div class="modal-body text-center">
                 <h3 class="mt-3 text-primary">Promote Customer</h3>
                 <p class="mb-3">Are you sure you want to send a promotional email to this customer?</p>
-                <input class="d-non" id="promoteEmail" />
+                <input class="d-none" id="promoteEmail" />
             </div>
             <div class="modal-footer justify-content-end">
                 <div>
