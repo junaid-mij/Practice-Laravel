@@ -108,9 +108,9 @@
 }
 
 
-.side-bar-item{
+.side-bar-item {
     display: inline-block;
-    padding: 12px 5px 12px 5px;
+    padding: 15px 5px 15px 20px;
     width: 100% !important;
 }
 .side-bar-item:hover{

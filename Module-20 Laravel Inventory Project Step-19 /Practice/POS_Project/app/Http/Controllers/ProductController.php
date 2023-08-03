@@ -41,6 +41,12 @@ class ProductController extends Controller
         $user_id = $request->header('id');
         return Product::where('user_id', $user_id)->get();
     }
+    // Select By ID:
+    function ProductByID(Request $request){
+        $user_id= $request->header('id');
+        $product_id= $request->input('id');
+        return Product::where('id', $product_id)->where('user_id', $user_id)->first();
+    }
     // Update:
     function ProductUpdate(Request $request){
         $user_id = $request->header('id');
@@ -79,11 +85,6 @@ class ProductController extends Controller
                 'category_id' => $request->input('category_id')
             ]);
         }
-    }
-    function ProductByID(Request $request){
-        $user_id= $request->header('id');
-        $product_id= $request->input('id');
-        return Product::where('id', $product_id)->where('user_id', $user_id)->first();
     }
     // Delete:
     function ProductDelete(Request $request){

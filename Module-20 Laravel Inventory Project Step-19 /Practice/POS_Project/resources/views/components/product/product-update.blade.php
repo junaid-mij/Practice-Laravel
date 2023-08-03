@@ -21,11 +21,12 @@
                                 <input type="text" class="form-control" id="productPriceUpdate">
                                 <label class="form-label">Unit</label>
                                 <input type="text" class="form-control" id="productUnitUpdate">
-                                <br/>
-                                <img class="w-15" id="oldImg" src="{{asset('images/default.jpg')}}"/>
-                                <br/>
+                                <br />
+                                <img class="w-15" id="oldImg" src="{{ asset('images/default.jpg') }}" />
+                                <br />
                                 <label class="form-label">Image</label>
-                                <input oninput="oldImg.src=window.URL.createObjectURL(this.files[0])"  type="file" class="form-control" id="productImgUpdate">
+                                <input oninput="oldImg.src=window.URL.createObjectURL(this.files[0])" type="file"
+                                    class="form-control" id="productImgUpdate">
 
                                 <input type="text" class="d-none" id="updateID">
                                 <input type="text" class="d-none" id="filePath">
@@ -37,8 +38,9 @@
             </div>
 
             <div class="modal-footer">
-                <button id="update-modal-close" class="btn btn-sm btn-danger" data-bs-dismiss="modal" aria-label="Close">Close</button>
-                <button onclick="update()" id="update-btn" class="btn btn-sm btn-success" >Update</button>
+                <button id="update-modal-close" class="btn btn-sm btn-danger" data-bs-dismiss="modal"
+                    aria-label="Close">Close</button>
+                <button onclick="update()" id="update-btn" class="btn btn-sm btn-success">Update</button>
             </div>
 
         </div>
@@ -48,6 +50,7 @@
 
 <script>
 
+    // Selecting the Category:
     async function FillCategoryDropDown(){
         let res = await axios.get("/list-category")
         res.data.forEach(function (item,i) {
@@ -56,6 +59,7 @@
         })
     }
 
+    // Fill Up the Update form with existing data:
     async function FillUpUpdateForm(id,filePath){
         document.getElementById('updateID').value=id;
         document.getElementById('filePath').value=filePath;
@@ -72,6 +76,7 @@
         document.getElementById('productCategoryUpdate').value=res.data['category_id'];
     }
 
+    // Update Product:
     async function update() {
 
         let productCategoryUpdate=document.getElementById('productCategoryUpdate').value;
@@ -126,5 +131,4 @@
             }
         }
     }
-
 </script>
