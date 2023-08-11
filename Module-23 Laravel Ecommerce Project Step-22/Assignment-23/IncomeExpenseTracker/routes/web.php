@@ -62,3 +62,5 @@ Route::get('/resetPassword',[UserController::class, 'ResetPasswordPage'])->middl
 // Dashboard Routes:
 Route::get('/dashboard',[DashboardController::class, 'DashboardPage'])->middleware([TokenVerificationMiddleware::class]);
 Route::get('/userProfile',[UserController::class, 'ProfilePage'])->middleware([TokenVerificationMiddleware::class]);
+Route::get('/incomePage',[IncomeController::class, 'IncomePage'])->middleware([TokenVerificationMiddleware::class]);
+Route::get('/expensePage',[ExpenseController::class, 'ExpensePage'])->middleware([TokenVerificationMiddleware::class]);
