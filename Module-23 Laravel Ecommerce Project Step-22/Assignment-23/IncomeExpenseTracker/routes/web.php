@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ExpenseController;
+use App\Http\Controllers\IncomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\TokenVerificationMiddleware;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +33,18 @@ Route::get('/user-profile ',[UserController::class, 'UserProfile'])->middleware(
 Route::post('/user-update ',[UserController::class, 'UpdateProfile'])->middleware([TokenVerificationMiddleware::class]);
 
 /* Dashboard Routes: */
+// Income Routes:
+Route::post('/create-income',[IncomeController::class, 'IncomeCreate'])->middleware([TokenVerificationMiddleware::class]);
+Route::get('/list-income',[IncomeController::class, 'IncomeList'])->middleware([TokenVerificationMiddleware::class]);
+Route::post('/update-income',[IncomeController::class, 'IncomeUpdate'])->middleware([TokenVerificationMiddleware::class]);
+Route::post('/delete-income',[IncomeController::class, 'IncomeDelete'])->middleware([TokenVerificationMiddleware::class]);
+Route::post('/income-by-id',[IncomeController::class, 'IncomeByID'])->middleware([TokenVerificationMiddleware::class]);
+// Expense Routes:
+Route::post('/create-expense',[ExpenseController::class, 'ExpenseCreate'])->middleware([TokenVerificationMiddleware::class]);
+Route::get('/list-expense',[ExpenseController::class, 'ExpenseList'])->middleware([TokenVerificationMiddleware::class]);
+Route::post('/update-expense',[ExpenseController::class, 'ExpenseUpdate'])->middleware([TokenVerificationMiddleware::class]);
+Route::post('/delete-expense',[ExpenseController::class, 'ExpenseDelete'])->middleware([TokenVerificationMiddleware::class]);
+Route::post('/expense-by-id',[ExpenseController::class, 'ExpenseByID'])->middleware([TokenVerificationMiddleware::class]);
 
 
 // User Logout:
