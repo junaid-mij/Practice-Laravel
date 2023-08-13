@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-md">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Create Income</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Create Expense</h5>
                 </div>
                 <div class="modal-body">
                     <form id="save-form">
@@ -70,11 +70,11 @@
             document.getElementById('modal-close').click();
 
             showLoader();
-            let res = await axios.post("/create-income",{amount:amount, description:description, date:date, category:category, payment_method:payment_method})
+            let res = await axios.post("/create-expense",{amount:amount, description:description, date:date, category:category, payment_method:payment_method})
             hideLoader();
 
             if(res.status===201){
-                successToast('Income Created Successfully');
+                successToast('Expense Created Successfully');
 
                 document.getElementById("save-form").reset();
                 await getList();

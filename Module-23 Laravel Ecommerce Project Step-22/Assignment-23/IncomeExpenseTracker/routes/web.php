@@ -33,6 +33,10 @@ Route::get('/user-profile ',[UserController::class, 'UserProfile'])->middleware(
 Route::post('/user-update ',[UserController::class, 'UpdateProfile'])->middleware([TokenVerificationMiddleware::class]);
 
 /* Dashboard Routes: */
+// Home Routes:
+Route::get('/total-income',[DashboardController::class, 'getTotalIncome'])->middleware([TokenVerificationMiddleware::class]);
+Route::get('/total-expense',[DashboardController::class, 'getTotalExpenses'])->middleware([TokenVerificationMiddleware::class]);
+Route::get('/net-income',[DashboardController::class, 'getNetIncome'])->middleware([TokenVerificationMiddleware::class]);
 // Income Routes:
 Route::post('/create-income',[IncomeController::class, 'IncomeCreate'])->middleware([TokenVerificationMiddleware::class]);
 Route::get('/list-income',[IncomeController::class, 'IncomeList'])->middleware([TokenVerificationMiddleware::class]);

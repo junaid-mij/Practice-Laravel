@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-md">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Update Income</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Update Expense</h5>
             </div>
             <div class="modal-body">
                 <form id="update-form">
@@ -46,7 +46,7 @@
     async function FillUpUpdateForm(id){
         document.getElementById('updateID').value=id;
         showLoader();
-        let res=await axios.post("/income-by-id",{id:id})
+        let res=await axios.post("/expense-by-id",{id:id})
         hideLoader();
         document.getElementById('amountUpdate').value=res.data['amount'];
         document.getElementById('descriptionUpdate').value=res.data['description'];
@@ -82,7 +82,7 @@
         else{
             document.getElementById('update-modal-close').click();
             showLoader();
-            let res = await axios.post("/update-income",{amount:amount, description:description, date:date, category:category, payment_method:payment_method, id:updateID})
+            let res = await axios.post("/update-expense",{amount:amount, description:description, date:date, category:category, payment_method:payment_method, id:updateID})
             hideLoader();
 
             if(res.status===200 && res.data===1){
