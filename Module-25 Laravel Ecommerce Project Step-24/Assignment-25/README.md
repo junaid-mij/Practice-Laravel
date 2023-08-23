@@ -1,3 +1,3 @@
-# Module-25  Event Management Project Assignment-25:
+# Module-25  Employee Leave Application Management System Assignment-25:
 
 # Author: Marajul Islam
