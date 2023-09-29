@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\TokenVerificationMiddleware;
@@ -52,6 +53,12 @@ Route::get('/list-product',[ProductController::class, 'ProductList'])->middlewar
 Route::post('/update-product',[ProductController::class, 'ProductUpdate'])->middleware([TokenVerificationMiddleware::class]);
 Route::post('/delete-product',[ProductController::class, 'ProductDelete'])->middleware([TokenVerificationMiddleware::class]);
 Route::post('/product-by-id',[ProductController::class, 'ProductByID'])->middleware([TokenVerificationMiddleware::class]);
+// Invoice Routes:
+Route::post('/create-invoice',[InvoiceController::class, 'InvoiceCreate'])->middleware([TokenVerificationMiddleware::class]);
+Route::get('/select-invoice',[InvoiceController::class, 'InvoiceSelect'])->middleware([TokenVerificationMiddleware::class]);
+Route::post('/details-invoice',[InvoiceController::class, 'InvoiceDetails'])->middleware([TokenVerificationMiddleware::class]);
+Route::post('/delete-invoice',[InvoiceController::class, 'InvoiceDelete'])->middleware([TokenVerificationMiddleware::class]);
+
 
 // User Logout:
 Route::get('/logout',[UserController::class, 'UserLogout']);
@@ -71,3 +78,5 @@ Route::get('/userProfile',[UserController::class, 'ProfilePage'])->middleware([T
 Route::get('/categoryPage',[CategoryController::class, 'CategoryPage'])->middleware([TokenVerificationMiddleware::class]);
 Route::get('/customerPage',[CustomerController::class, 'CustomerPage'])->middleware([TokenVerificationMiddleware::class]);
 Route::get('/productPage',[ProductController::class, 'ProductPage'])->middleware([TokenVerificationMiddleware::class]);
+Route::get('/invoicePage',[InvoiceController::class, 'InvoicePage'])->middleware([TokenVerificationMiddleware::class]);
+Route::get('/salePage',[InvoiceController::class, 'SalePage'])->middleware([TokenVerificationMiddleware::class]);
