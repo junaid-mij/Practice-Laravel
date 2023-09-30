@@ -81,7 +81,7 @@
 
         res.data['product'].forEach(function (item,index) {
             let row=`<tr class="text-xs">
-                        <td>${item['product_id']['name']}</td>
+                        <td>${item['product']['name']}</td>
                         <td>${item['qty']}</td>
                         <td>${item['sale_price']}</td>
                      </tr>`
