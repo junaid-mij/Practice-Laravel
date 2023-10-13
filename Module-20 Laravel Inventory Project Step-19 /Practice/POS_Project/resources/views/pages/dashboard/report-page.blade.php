@@ -18,9 +18,7 @@
     </div>
 @endsection
 
-
 <script>
-
     function SalesReport() {
         let FormDate = document.getElementById('FormDate').value;
         let ToDate = document.getElementById('ToDate').value;
@@ -30,9 +28,5 @@
         }else{
             window.open('/sales-report/'+FormDate+'/'+ToDate);
         }
-
-
-
     }
-
 </script>

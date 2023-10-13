@@ -5,6 +5,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\TokenVerificationMiddleware;
 use Illuminate\Support\Facades\Route;
@@ -60,7 +61,7 @@ Route::post('/details-invoice',[InvoiceController::class, 'InvoiceDetails'])->mi
 Route::post('/delete-invoice',[InvoiceController::class, 'InvoiceDelete'])->middleware([TokenVerificationMiddleware::class]);
 // Summary & Report Routes:
 Route::get('/summary',[DashboardController::class, 'Summary'])->middleware([TokenVerificationMiddleware::class]);
-
+Route::get("/sales-report/{FromDate}/{ToDate}",[ReportController::class, 'SalesReport'])->middleware([TokenVerificationMiddleware::class]);
 
 // User Logout:
 Route::get('/logout',[UserController::class, 'UserLogout']);
@@ -82,3 +83,4 @@ Route::get('/customerPage',[CustomerController::class, 'CustomerPage'])->middlew
 Route::get('/productPage',[ProductController::class, 'ProductPage'])->middleware([TokenVerificationMiddleware::class]);
 Route::get('/invoicePage',[InvoiceController::class, 'InvoicePage'])->middleware([TokenVerificationMiddleware::class]);
 Route::get('/salePage',[InvoiceController::class, 'SalePage'])->middleware([TokenVerificationMiddleware::class]);
+Route::get('/reportPage',[ReportController::class, 'ReportPage'])->middleware([TokenVerificationMiddleware::class]);
