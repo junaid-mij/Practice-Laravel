@@ -13,7 +13,21 @@ return new class extends Migration
     {
         Schema::create('product_wishes', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+
+            // Relationships:
+            $table->unsignedBigInteger('product_id');
+            $table->foreign('product_id')->references('id')->on('products')
+                ->restrictOnUpdate()
+                ->restrictOnDelete();
+
+            // Relationships:
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')
+                ->restrictOnUpdate()
+                ->restrictOnDelete();
+
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
 

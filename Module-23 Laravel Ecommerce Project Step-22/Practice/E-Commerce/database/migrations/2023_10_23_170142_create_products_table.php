@@ -13,7 +13,29 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+
+            $table->string('title',200);
+            $table->string('short_des',500);
+            $table->string('price',50);
+            $table->boolean('discount');
+            $table->string('discount_price',50);
+            $table->string('image',200);
+            $table->boolean('stock');
+            $table->float('star');
+            $table->enum('remark',['popular','new','top','special','trending','regular']);
+
+            // Relationships:
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories')
+            ->cascadeOnUpdate()->restrictOnDelete();
+
+            // Relationships:
+            $table->unsignedBigInteger('brand_id');
+            $table->foreign('brand_id')->references('id')->on('brands')
+            ->cascadeOnUpdate()->restrictOnDelete();
+
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
 

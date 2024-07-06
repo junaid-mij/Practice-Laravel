@@ -13,7 +13,26 @@ return new class extends Migration
     {
         Schema::create('product_carts', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+
+            // Relationships:
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')
+                ->restrictOnUpdate()
+                ->restrictOnDelete();
+
+            // Relationships:
+            $table->unsignedBigInteger('product_id');
+            $table->foreign('product_id')->references('id')->on('products')
+                ->restrictOnUpdate()
+                ->restrictOnDelete();
+
+            $table->string('color',200);
+            $table->string('size',200);
+            $table->string('qty',200);
+            $table->string('price',200);
+
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
 
