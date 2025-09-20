@@ -44,4 +44,5 @@ class ProductController extends Controller
             }])->get();
         return ResponseHelper::Out('success',$data,200);
     }
+
 }
