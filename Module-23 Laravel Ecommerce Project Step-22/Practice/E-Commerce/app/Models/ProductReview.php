@@ -8,14 +8,14 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class ProductReview extends Model
 {
-    public function profile():BelongsTo
-    {
-        return $this->BelongsTo(CustomerProfile::class,'customer_id');
-    }
-    protected $fillable = [
-        'description',
-        'rating',
-        'customer_id',
-        'product_id'
-    ];
+    // public function profile():BelongsTo
+    // {
+    //     return $this->BelongsTo(CustomerProfile::class,'customer_id');
+    // }
+    // protected $fillable = [
+    //     'description',
+    //     'rating',
+    //     'customer_id',
+    //     'product_id'
+    // ];
 }
