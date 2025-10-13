@@ -55,3 +55,16 @@ Route::get('/logout', [UserController::class, 'UserLogout']);
 // User Profile:
 Route::post('/CreateProfile', [ProfileController::class, 'CreateProfile'])->middleware([TokenAuthenticate::class]);
 Route::get('/ReadProfile', [ProfileController::class, 'ReadProfile'])->middleware([TokenAuthenticate::class]);
+
+// Product Review:
+Route::post('/CreateProductReview', [ProductController::class, 'CreateProductReview'])->middleware([TokenAuthenticate::class]);
+
+// Product Wish:
+Route::get('/ProductWishList', [ProductController::class, 'ProductWishList'])->middleware([TokenAuthenticate::class]);
+Route::get('/CreateWishList/{product_id}', [ProductController::class, 'CreateWishList'])->middleware([TokenAuthenticate::class]);
+Route::get('/RemoveWishList/{product_id}', [ProductController::class, 'RemoveWishList'])->middleware([TokenAuthenticate::class]);
+
+// Product Cart:
+Route::get('/ProductCartList', [ProductController::class, 'ProductCartList'])->middleware([TokenAuthenticate::class]);
+Route::post('/CreateCartList', [ProductController::class, 'CreateCartList'])->middleware([TokenAuthenticate::class]);
+Route::get('/RemoveCartList/{product_id}', [ProductController::class, 'RemoveCartList'])->middleware([TokenAuthenticate::class]);
