@@ -18,6 +18,7 @@ class InvoiceController extends Controller
     function SalePage():View{
         return view('pages.dashboard.sale-page');
     }
+
     // CRUD Operations:
     // Create:
     function InvoiceCreate(Request $request){

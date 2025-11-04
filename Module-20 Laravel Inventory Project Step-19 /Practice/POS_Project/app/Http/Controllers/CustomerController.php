@@ -10,6 +10,7 @@ class CustomerController extends Controller
     function CustomerPage(){
         return view('pages.dashboard.customer-page');
     }
+
     // CRUD Operations:
     // Create:
     function CustomerCreate(Request $request){

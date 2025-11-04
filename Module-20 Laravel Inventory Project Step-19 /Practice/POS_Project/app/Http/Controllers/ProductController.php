@@ -11,6 +11,7 @@ class ProductController extends Controller
     function ProductPage(){
         return view('pages.dashboard.product-page');
     }
+
     // CRUD Operations:
     // Create:
     function ProductCreate(Request $request){

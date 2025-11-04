@@ -51,4 +51,5 @@ class OTPMail extends Mailable
     {
         return [];
     }
+
 }

@@ -13,4 +13,5 @@ class InvoiceProduct extends Model
     function product():BelongsTo{
         return $this->belongsTo(Product::class);
     }
+
 }

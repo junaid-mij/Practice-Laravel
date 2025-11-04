@@ -189,4 +189,5 @@ class UserController extends Controller
     function ProfilePage():View{
         return view('pages.dashboard.profile-page');
     }
+
 }

@@ -12,6 +12,7 @@ class ReportController extends Controller
     function ReportPage(){
         return view('pages.dashboard.report-page');
     }
+
     // Sales Report Functions:
     function SalesReport(Request $request){
         // Pick User ID:
